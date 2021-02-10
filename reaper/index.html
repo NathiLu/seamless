@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>User Guide (Reaper) - HuFo System</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "User Guide (Reaper)";
+    var mkdocs_page_input_path = "reaper.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> HuFo System</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="" href="https://hvc.berlin/projects/hufo-listening-room/">Back to Project Page</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">User Guide (Reaper)</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#audio-sources-in-general">Audio-Sources in general</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#audio-sources-in-reaper">Audio Sources  in REAPER</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#content-production-process">Content Production Process</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#content-playback">Content Playback</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../supercollider/">SuperCollider</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../oscrouter/">OSC Router</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../signalflow/">Signal Flow</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../system_setup/">System Setup</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">HuFo System</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>User Guide (Reaper)</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="hufo-content-organization">HUFO Content organization</h1>
+<p>Content for the HUFO-Hearing room is organized in Reaper-Projects. Those consists of audio content and source-automation data which is sent by plugins capable of sending and receiving OSC-Messages over network.</p>
+<hr />
+<h2 id="audio-sources-in-general">Audio-Sources in general</h2>
+<p>An audio-source in a spatial audio-system is defined by the audio content and the source attributes, like the position of the source. Depending on the used rendering-module in the HUFO-System (WFS, Ambisonics, Reverb) additional attributes can be defined, e.g. "planewave" and "doppler effect" for the wavefieldsynthesis module. </p>
+<p>The rendering modules are running parallel for all sources. Which rendering module is used can be determined with the additional "send to" parameters, which control the amount of the audio-signal being sent to a specific rendering module. In that way a fades from on to another system as well as mixtures can be realised. </p>
+<p>By definition all Audio-Sources are Mono-Audio sources and best results in spatial precisions are achieved by sending all audio-element to a single audio source. Of course stereo or other multichannel material can be used too, by using audio sources as virtual speakers which are rendered by the system.</p>
+<hr />
+<h2 id="audio-sources-in-reaper">Audio Sources  in REAPER</h2>
+<p>For defining an audio-source in REAPER, a Plugin is used for sending the source attributes via OSC synchronized to the audio playback (here OSCar by IRCAM is used).</p>
+<p>Every audio source is identified by an ID (1-64) which is set in the plugin and corresponds to the channel the audio is sent out. This also means every instance of the plugins represents one audio source.</p>
+<p>The output of the audio tracks should be set be sent to a mono channel, either as direct hardware output or if you are using bus-systems to a mono channel on the bus-track.</p>
+<hr />
+<p><img alt="reapersource" src="../graphics/reaper_source.svg" title="One Source in Reaper" /></p>
+<hr />
+<p><img alt="oscar-inreaper" src="../graphics/Reaper-OscarPlugin.svg" title="OSCar plugin with source ID" /></p>
+<hr />
+<p><img alt="reapearmono" src="graphics/Reaper_HWmono1.svg" title="Mono Output Routing" /></p>
+<hr />
+<h2 id="content-production-process">Content Production Process</h2>
+<p><img alt="" src="../graphics/ReaperDiagramm.png" /></p>
+<p>In the production process the automation data can either be written with the pencil tool inside of REAPER. Also a dedicated interface-client or hardware controllers can be used, which connect also to the central osc-router. The osc-messages are then distributed to the REAPER-plugin where it can be written using the Reaper's automation-modi.</p>
+<p><strong>Since it is not defined which state the sources have at the beginning of the playback all source-attributes must be set at the beginning of the project.</strong></p>
+<p>For more information about the OSC-Data have a look in the chapter OSC-Router.</p>
+<p><img alt="" src="../graphics/interface-example.png" /></p>
+<hr />
+<h2 id="content-playback">Content Playback</h2>
+<p>The result of a production is a multichannel audio file in which the plugin automation data will be embedded with REAPER's Take FX function. This file including the automations will be saved in Reaper Project Bay from it then can be pasted and arranged in a playback project.</p>
+<p>For the project-export a Reaperscript is provided which automates the rendering and data-embedding process.</p>
+<p><img alt="" src="../graphics/Playback-project.png" /></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../supercollider/" class="btn btn-neutral float-right" title="SuperCollider">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+      
+        <span style="margin-left: 15px"><a href="../supercollider/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

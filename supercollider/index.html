@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>SuperCollider - HuFo System</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "SuperCollider";
+    var mkdocs_page_input_path = "supercollider.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> HuFo System</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="" href="https://hvc.berlin/projects/hufo-listening-room/">Back to Project Page</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../reaper/">User Guide (Reaper)</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">SuperCollider</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#build-decoders">Build Decoders</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#install-decoders">Install Decoders</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#supercollider-osc-paths">SuperCollider OSC Paths</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#sends">Sends</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#to-ambisonics-wfs">To Ambisonics + WFS</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#to-subwoofer">To Subwoofer</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#ambisonics-spatial-control">Ambisonics Spatial Control</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../oscrouter/">OSC Router</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../signalflow/">Signal Flow</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../system_setup/">System Setup</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">HuFo System</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>SuperCollider</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="supercollider">SuperCollider</h1>
+<p>SuperCollider is used as a mixing and distribution instance for the source signals, as well as for Ambisonics encoding.</p>
+<h2 id="build-decoders">Build Decoders</h2>
+<p>Decoders in ADT have a problem for more than speakers 24? speakers. Use standalone decoder in that case.</p>
+<h2 id="install-decoders">Install Decoders</h2>
+<p>Copy the directory <code>decoders</code> to the SC user 
+extension directory. It can be obtained in SC:</p>
+<p><code>Platform.userExtensionDir</code></p>
+<p>For larger loudspeaker setups (&lt;24), standalone Jack decoders are used.</p>
+<h2 id="supercollider-osc-paths">SuperCollider OSC Paths</h2>
+<p>The sueprcollider mixer listens to several OSC messages for signal routing and conrolling positions</p>
+<h3 id="sends">Sends</h3>
+<h4 id="to-ambisonics-wfs">To Ambisonics + WFS</h4>
+<p><code>/source/send/spatial i i f</code></p>
+<ul>
+<li>first argument = channel ID</li>
+<li>second argument = system ID</li>
+<li>0 = Ambisonics (inside SC)</li>
+<li>1 = WFS (external, WONDER)</li>
+</ul>
+<h4 id="to-subwoofer">To Subwoofer</h4>
+<p><code>/source/send/direct i i f</code></p>
+<ul>
+<li>first argument = channel ID</li>
+<li>second argument = output ID</li>
+<li>0 = Subwoofer</li>
+</ul>
+<h3 id="ambisonics-spatial-control">Ambisonics Spatial Control</h3>
+<p><code>/source/pos/azim i f</code></p>
+<ul>
+<li>first argument = channel ID</li>
+<li>second argument = angle (rad)</li>
+</ul>
+<p><code>/source/pos/elev i f</code></p>
+<ul>
+<li>first argument = channel ID</li>
+<li>second argument = angle (rad)</li>
+</ul>
+<p><code>/source/pos/dist i f</code></p>
+<ul>
+<li>first argument = channel ID</li>
+<li>second argument = distance (meters)</li>
+</ul>
+<p><code>/source/pos/aed i f f f</code></p>
+<ul>
+<li>first argument  = channel ID</li>
+<li>second argument = azimuth (degree)</li>
+<li>third argument  = elevation (degree)</li>
+<li>fourth argument = distance (meters)</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../oscrouter/" class="btn btn-neutral float-right" title="OSC Router">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../reaper/" class="btn btn-neutral" title="User Guide (Reaper)"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../reaper/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../oscrouter/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
