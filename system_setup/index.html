@@ -58,7 +58,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#supercollider" class="md-skip">
+        <a href="#setting-up-the-system" class="md-skip">
           Skip to content
         </a>
       
@@ -266,9 +266,52 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          System Setup
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         System Setup
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#python-dependencies" class="md-nav__link">
+    Python Dependencies
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supercollider" class="md-nav__link">
+    SuperCollider
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-services" class="md-nav__link">
+    System Services
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -298,6 +341,35 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#python-dependencies" class="md-nav__link">
+    Python Dependencies
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supercollider" class="md-nav__link">
+    SuperCollider
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-services" class="md-nav__link">
+    System Services
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -309,8 +381,11 @@
               
                 
                 
-                <p>pip3 install oscpy</p>
-<h1 id="supercollider">SuperCollider</h1>
+                <h1 id="setting-up-the-system">Setting up the System</h1>
+<h2 id="python-dependencies">Python Dependencies</h2>
+<pre><code>pip3 install oscpy
+</code></pre>
+<h2 id="supercollider">SuperCollider</h2>
 <p>Build a headless version of SC:</p>
 <p>Follow https://github.com/supercollider/supercollider/blob/develop/README_LINUX.md but call cmake:</p>
 <pre><code>cmake -DCMAKE_BUILD_TYPE=Release -DNATIVE=ON -DSC_EL=no -DSC_ABLETON_LINK=off -NO_X11=ON -DSC_QT=OFF ..
@@ -321,7 +396,7 @@
 <p>Install SC-HOA classes:</p>
 <pre><code>Quarks.install("https://github.com/florian-grond/SC-HOA")
 </code></pre>
-<h1 id="system-services">System Services</h1>
+<h2 id="system-services">System Services</h2>
 <p>copy all services to:</p>
 <pre><code>/usr/lib/systemd/system
 </code></pre>

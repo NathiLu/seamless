@@ -58,7 +58,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#concept" class="md-skip">
+        <a href="#about-the-system" class="md-skip">
           Skip to content
         </a>
       
@@ -176,9 +176,72 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          About the System
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         About the System
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#concept" class="md-nav__link">
+    Concept
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#loudspeaker-configuration" class="md-nav__link">
+    Loudspeaker Configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fundamentals-of-spatialization" class="md-nav__link">
+    Fundamentals of Spatialization
+  </a>
+  
+    <nav class="md-nav" aria-label="Fundamentals of Spatialization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-virtual-sound-source" class="md-nav__link">
+    The Virtual Sound Source
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-send-system" class="md-nav__link">
+    The Send-System
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -296,6 +359,55 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#concept" class="md-nav__link">
+    Concept
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#loudspeaker-configuration" class="md-nav__link">
+    Loudspeaker Configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fundamentals-of-spatialization" class="md-nav__link">
+    Fundamentals of Spatialization
+  </a>
+  
+    <nav class="md-nav" aria-label="Fundamentals of Spatialization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-virtual-sound-source" class="md-nav__link">
+    The Virtual Sound Source
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-send-system" class="md-nav__link">
+    The Send-System
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -307,7 +419,8 @@
               
                 
                 
-                <h1 id="concept">Concept</h1>
+                <h1 id="about-the-system">About the System</h1>
+<h2 id="concept">Concept</h2>
 <p>The Ethnomusicology Museum at the newly built
 <a href="https://www.humboldtforum.org/en/">Humboldt Forum</a> features a listening room for immersive
 illustration of relevant auditory content.
@@ -316,14 +429,33 @@ mainly Wave Field Synthesis (WFS) and Higher Order Ambisonics (HOA), thus
 providing an enhanced spatial experience.
 A dedicated software system, developed by the <a href="https://www.ak.tu-berlin.de/menue/fachgebiet_audiokommunikation/">Audiocommunication Group</a>
 at TU Berlin, allows a seamless integration of these methods.</p>
-<h1 id="loudspeaker-configuration">Loudspeaker Configuration</h1>
+<h2 id="loudspeaker-configuration">Loudspeaker Configuration</h2>
 <p>The listening room features 32 WFS panels by <a href="http://fouraudio.com/en/products/wfs.html">Four Audio</a>. This results in a total of 256 WFS channels, using 768 tweeters and 64 woofers.  Both arcs hold 16 panels each, mounted as a continuous ribbon above head height with  a  horizontal  speaker  distance  of 10 cm.   45 Genelec 8020C speakers are arranged  in  three  levels  on  each  arc,   used  for Ambisonics rendering.</p>
-<p><img alt="topview" src="../graphics/top_view_speakers.png" style="width:400px" title="Top view." /></p>
+<p><img alt="topview" src="../graphics/top_view_speakers.png" style="width:500px" title="Top view." /></p>
 <p><em>Top view of the listening room with the entrances (left,right) and two
 arcs, each with a ribbon of WFS panels (gray).</em></p>
 <hr />
-<p><img alt="sideview" src="../graphics/side_view_speakers.png" style="width:500px" title="Side view." /></p>
+<p><img alt="sideview" src="../graphics/side_view_speakers.png" style="width:600px" title="Side view." /></p>
 <p><em>Side view of a single arc with the ribbon of WFS panels (gray) and the Ambisonics speakers (black).</em></p>
+<hr />
+<h2 id="fundamentals-of-spatialization">Fundamentals of Spatialization</h2>
+<h4 id="the-virtual-sound-source">The Virtual Sound Source</h4>
+<p>The combined system works with so called <em>virtual sound sources</em>, also referred
+to as the object oriented approach of sound spatialization.
+The figure below shows the model of such such a virtual sound source,
+which is defined by its position, using two angles, the distance and a source width.</p>
+<p><img alt="sound-source" src="../graphics/sound_source.png" style="width:400px" title="Virtual Sound Source." /></p>
+<p>Every sound event in a project or composition can be connected to such a virtual sound source,
+allowing to place it in the listening space.
+Depending on the preferred workflow, different tools can be used for a dynamic
+arrangement of the individual sound sources.
+The provided tools in <a href="reaper/">Reaper</a> grant a quick entry
+by providing control through simple automation trajectories in a DAW project.</p>
+<h4 id="the-send-system">The Send-System</h4>
+<p>In addition to the position of the virtual sound source,
+the proposed approach also allows the continuous fade of
+sound events between the Ambisonics and the WFS rendering
+through a send system.</p>
                 
               
               

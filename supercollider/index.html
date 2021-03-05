@@ -278,6 +278,80 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#setting-up" class="md-nav__link">
+    Setting Up
+  </a>
+  
+    <nav class="md-nav" aria-label="Setting Up">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#build-decoders" class="md-nav__link">
+    Build Decoders
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-decoders" class="md-nav__link">
+    Install Decoders
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supercollider-osc-paths" class="md-nav__link">
+    SuperCollider OSC Paths
+  </a>
+  
+    <nav class="md-nav" aria-label="SuperCollider OSC Paths">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sends" class="md-nav__link">
+    Sends
+  </a>
+  
+    <nav class="md-nav" aria-label="Sends">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#to-ambisonics-wfs" class="md-nav__link">
+    To Ambisonics + WFS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#to-subwoofer" class="md-nav__link">
+    To Subwoofer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ambisonics-spatial-control" class="md-nav__link">
+    Ambisonics Spatial Control
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -354,6 +428,80 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#setting-up" class="md-nav__link">
+    Setting Up
+  </a>
+  
+    <nav class="md-nav" aria-label="Setting Up">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#build-decoders" class="md-nav__link">
+    Build Decoders
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-decoders" class="md-nav__link">
+    Install Decoders
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supercollider-osc-paths" class="md-nav__link">
+    SuperCollider OSC Paths
+  </a>
+  
+    <nav class="md-nav" aria-label="SuperCollider OSC Paths">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sends" class="md-nav__link">
+    Sends
+  </a>
+  
+    <nav class="md-nav" aria-label="Sends">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#to-ambisonics-wfs" class="md-nav__link">
+    To Ambisonics + WFS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#to-subwoofer" class="md-nav__link">
+    To Subwoofer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ambisonics-spatial-control" class="md-nav__link">
+    Ambisonics Spatial Control
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -370,9 +518,9 @@
                 <h1 id="supercollider">SuperCollider</h1>
 <p>Mixing and signal distribution is based on SuperCollider.
 Two main scripts are used:</p>
-<h3 id="hufo_serverscd">HuFo_SERVER.scd</h3>
+<h2 id="hufo_serverscd">HuFo_SERVER.scd</h2>
 <p><strong>HuFo_SERVER</strong> is a mixing and distribution instance for the source signals, as well as for Ambisonics encoding.</p>
-<h3 id="hufo_wfsscd">HuFo_WFS.scd</h3>
+<h2 id="hufo_wfsscd">HuFo_WFS.scd</h2>
 <p><strong>HuFo_WFS</strong> is a  mixing and distribution instance for the source signals, limited to WFS for.</p>
 <p>Both instances are take the same optional input arguments:</p>
 <pre><code class="language-console">$ sclang HuFo_SERVER.scd &lt;N_inputs&gt; &lt;server_port&gt;
@@ -383,15 +531,15 @@ $ sclang HuFo_WFS.scd &lt;N_inputs&gt; &lt;server_port&gt;
 <li>N_inputs: 64</li>
 <li>server_port: 58010</li>
 </ul>
-<h1 id="setting-up">Setting Up</h1>
-<h2 id="build-decoders">Build Decoders</h2>
+<h2 id="setting-up">Setting Up</h2>
+<h3 id="build-decoders">Build Decoders</h3>
 <p>Decoders in ADT have a problem for more than speakers 24? speakers. Use standalone decoder in that case.</p>
-<h2 id="install-decoders">Install Decoders</h2>
-<p>Copy the directory <code>decoders</code> to the SC user 
+<h3 id="install-decoders">Install Decoders</h3>
+<p>Copy the directory <code>decoders</code> to the SC user
 extension directory. It can be obtained in SC:</p>
 <p><code>Platform.userExtensionDir</code></p>
 <p>For larger loudspeaker setups (&lt;24), standalone Jack decoders are used.</p>
-<h1 id="supercollider-osc-paths">SuperCollider OSC Paths</h1>
+<h2 id="supercollider-osc-paths">SuperCollider OSC Paths</h2>
 <p>The sueprcollider mixer listens to several OSC messages for signal routing and conrolling positions</p>
 <h3 id="sends">Sends</h3>
 <h4 id="to-ambisonics-wfs">To Ambisonics + WFS</h4>
@@ -409,7 +557,7 @@ extension directory. It can be obtained in SC:</p>
 <li>second argument = output ID</li>
 <li>0 = Subwoofer</li>
 </ul>
-<h3 id="ambisonics-spatial-control">Ambisonics Spatial Control</h3>
+<h4 id="ambisonics-spatial-control">Ambisonics Spatial Control</h4>
 <p><code>/source/pos/azim i f</code></p>
 <ul>
 <li>first argument = channel ID</li>
