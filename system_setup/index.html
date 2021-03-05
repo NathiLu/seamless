@@ -168,6 +168,21 @@
   
   
     <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        About the System
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../reaper/" class="md-nav__link">
         Reaper User Guide
       </a>
@@ -181,34 +196,28 @@
 
   
   
-  
-    <li class="md-nav__item">
-      <a href="../supercollider/" class="md-nav__link">
-        SuperCollider
-      </a>
-    </li>
-  
-
     
-      
-      
-      
-
   
   
-  
-    <li class="md-nav__item">
-      <a href="../oscrouter/" class="md-nav__link">
-        OSC Router
-      </a>
-    </li>
-  
-
     
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
       
-
+      <label class="md-nav__link" for="nav-3">
+        Technical Documentation
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Technical Documentation" data-md-level="1">
+        <label class="md-nav__title" for="nav-3">
+          <span class="md-nav__icon md-icon"></span>
+          Technical Documentation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
   
   
   
@@ -219,11 +228,32 @@
     </li>
   
 
-    
-      
-      
-      
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../supercollider/" class="md-nav__link">
+        SuperCollider
+      </a>
+    </li>
+  
 
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../oscrouter/" class="md-nav__link">
+        OSC Router
+      </a>
+    </li>
+  
+
+          
+            
   
   
     
@@ -240,6 +270,12 @@
         System Setup
       </a>
       
+    </li>
+  
+
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -277,7 +313,7 @@
 <h1 id="supercollider">SuperCollider</h1>
 <p>Build a headless version of SC:</p>
 <p>Follow https://github.com/supercollider/supercollider/blob/develop/README_LINUX.md but call cmake:</p>
-<pre><code>cmake -NO_X11=ON -DSC_QT=OFF ..
+<pre><code>cmake -DCMAKE_BUILD_TYPE=Release -DNATIVE=ON -DSC_EL=no -DSC_ABLETON_LINK=off -NO_X11=ON -DSC_QT=OFF ..
 </code></pre>
 <p>Install SC3-Plugins:</p>
 <pre><code>https://github.com/supercollider/sc3-plugins
@@ -307,7 +343,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../signalflow/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../oscrouter/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -316,7 +352,7 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Signal Flow
+                OSC Router
               </div>
             </div>
           </a>

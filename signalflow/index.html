@@ -168,6 +168,21 @@
   
   
     <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        About the System
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../reaper/" class="md-nav__link">
         Reaper User Guide
       </a>
@@ -181,34 +196,28 @@
 
   
   
-  
-    <li class="md-nav__item">
-      <a href="../supercollider/" class="md-nav__link">
-        SuperCollider
-      </a>
-    </li>
-  
-
     
-      
-      
-      
-
   
   
-  
-    <li class="md-nav__item">
-      <a href="../oscrouter/" class="md-nav__link">
-        OSC Router
-      </a>
-    </li>
-  
-
     
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
       
-
+      <label class="md-nav__link" for="nav-3">
+        Technical Documentation
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Technical Documentation" data-md-level="1">
+        <label class="md-nav__title" for="nav-3">
+          <span class="md-nav__icon md-icon"></span>
+          Technical Documentation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
   
   
     
@@ -228,11 +237,32 @@
     </li>
   
 
-    
-      
-      
-      
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../supercollider/" class="md-nav__link">
+        SuperCollider
+      </a>
+    </li>
+  
 
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../oscrouter/" class="md-nav__link">
+        OSC Router
+      </a>
+    </li>
+  
+
+          
+            
   
   
   
@@ -240,6 +270,12 @@
       <a href="../system_setup/" class="md-nav__link">
         System Setup
       </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -275,7 +311,7 @@
                 
                 <h1 id="signal-flow">Signal Flow</h1>
 <p>The following flow chart visualizes the interconnection between the software components. Scroll down to get the exact input and output assignment.</p>
-<p><img alt="Signal Flow" src="../graphics/hufo_flow_1.svg" /></p>
+<p><img alt="Signal Flow" src="../graphics/hufo_flow_2.png" /></p>
 <h1 id="input-output-assignment">Input-Output Assignment</h1>
 <h3 id="linux-main-dante">Linux: MAIN (DANTE)</h3>
 <table>
@@ -341,7 +377,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../oscrouter/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../reaper/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -350,19 +386,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                OSC Router
+                Reaper User Guide
               </div>
             </div>
           </a>
         
         
-          <a href="../system_setup/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../supercollider/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                System Setup
+                SuperCollider
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
