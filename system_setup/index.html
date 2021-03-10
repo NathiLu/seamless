@@ -400,6 +400,18 @@
 <p>copy all services to:</p>
 <pre><code>/usr/lib/systemd/system
 </code></pre>
+<h1 id="disable-automatic-updates">Disable Automatic Updates</h1>
+<p>Automatic updates are not desired, since they can change the 
+system behavior. In addition can disable the DANTE drivers.</p>
+<p>Edit:</p>
+<pre><code>/etc/apt/apt.conf.d/20auto-upgrades
+</code></pre>
+<p>It needs to be:</p>
+<pre><code>APT::Periodic::Update-Package-Lists "0";
+APT::Periodic::Download-Upgradeable-Packages "0";
+APT::Periodic::AutocleanInterval "0";
+APT::Periodic::Unattended-Upgrade "1";
+</code></pre>
                 
               
               
