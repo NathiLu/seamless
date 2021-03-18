@@ -303,8 +303,22 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#developer-mode" class="md-nav__link">
+    Developer Mode
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#system-services" class="md-nav__link">
     System Services
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disable-automatic-updates" class="md-nav__link">
+    Disable Automatic Updates
   </a>
   
 </li>
@@ -362,8 +376,22 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#developer-mode" class="md-nav__link">
+    Developer Mode
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#system-services" class="md-nav__link">
     System Services
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disable-automatic-updates" class="md-nav__link">
+    Disable Automatic Updates
   </a>
   
 </li>
@@ -386,7 +414,8 @@
 <pre><code>pip3 install oscpy
 </code></pre>
 <h2 id="supercollider">SuperCollider</h2>
-<p>Build a headless version of SC:</p>
+<p>1: Build and install SC</p>
+<p>2: Build a headless version of SC:</p>
 <p>Follow https://github.com/supercollider/supercollider/blob/develop/README_LINUX.md but call cmake:</p>
 <pre><code>cmake -DCMAKE_BUILD_TYPE=Release -DNATIVE=ON -DSC_EL=no -DSC_ABLETON_LINK=off -NO_X11=ON -DSC_QT=OFF ..
 </code></pre>
@@ -396,12 +425,18 @@
 <p>Install SC-HOA classes:</p>
 <pre><code>Quarks.install("https://github.com/florian-grond/SC-HOA")
 </code></pre>
+<h2 id="developer-mode">Developer Mode</h2>
+<p>The scripts <code>supercollider_gui.sh</code> and <code>supercollider_nogui.sh</code>
+allow to switch between the standard SC install
+and the headless version by setting symlinks in <code>/usr/local/bin</code></p>
+<p>Once the standard version is lionked, <code>scide</code> can be started for
+development and debugging.</p>
 <h2 id="system-services">System Services</h2>
 <p>copy all services to:</p>
 <pre><code>/usr/lib/systemd/system
 </code></pre>
-<h1 id="disable-automatic-updates">Disable Automatic Updates</h1>
-<p>Automatic updates are not desired, since they can change the 
+<h2 id="disable-automatic-updates">Disable Automatic Updates</h2>
+<p>Automatic updates are not desired, since they can change the
 system behavior. In addition can disable the DANTE drivers.</p>
 <p>Edit:</p>
 <pre><code>/etc/apt/apt.conf.d/20auto-upgrades
