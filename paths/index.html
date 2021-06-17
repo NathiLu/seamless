@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="../assets/images/favicon.png" rel="shortcut icon"/>
 <meta content="mkdocs-1.1.2, mkdocs-material-6.2.8" name="generator"/>
-<title>SuperCollider - SeamLess</title>
+<title>OSC Paths - SeamLess</title>
 <link href="../assets/stylesheets/main.cb6bc1d0.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.39b8e14a.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -19,7 +19,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#supercollider">
+<a class="md-skip" href="#osc-paths">
           Skip to content
         </a>
 </div>
@@ -43,7 +43,7 @@
 <div class="md-header-nav__topic">
 <span class="md-ellipsis">
             
-              SuperCollider
+              OSC Paths
             
           </span>
 </div>
@@ -75,8 +75,8 @@
         Reaper User Guide
       </a>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" id="nav-3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="nav-3" id="nav-3" type="checkbox"/>
 <label class="md-nav__link" for="nav-3">
         SeamLess Plugins
         <span class="md-nav__icon md-icon"></span>
@@ -92,16 +92,58 @@
         Plugins
       </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../paths/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          OSC Paths
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
         OSC Paths
       </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#spatial">
+    Spatial
+  </a>
+<nav aria-label="Spatial" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#x-position">
+    X Position
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#y-position">
+    Y Position
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#z-position">
+    Z Position
+  </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="nav-4" id="nav-4" type="checkbox"/>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bus-send">
+    Bus Send
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" id="nav-4" type="checkbox"/>
 <label class="md-nav__link" for="nav-4">
         Technical Documentation
         <span class="md-nav__icon md-icon"></span>
@@ -117,99 +159,10 @@
         Signal Flow
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-          SuperCollider
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../supercollider/">
         SuperCollider
       </a>
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#hufo_serverscd">
-    HuFo_SERVER.scd
-  </a>
-<nav aria-label="HuFo_SERVER.scd" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#sc-io-assignment">
-    SC IO Assignment
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#hufo_wfsscd">
-    HuFo_WFS.scd
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#starting">
-    Starting
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#setting-up">
-    Setting Up
-  </a>
-<nav aria-label="Setting Up" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#build-decoders">
-    Build Decoders
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#install-decoders">
-    Install Decoders
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#supercollider-osc-paths">
-    SuperCollider OSC Paths
-  </a>
-<nav aria-label="SuperCollider OSC Paths" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#sends">
-    Sends
-  </a>
-<nav aria-label="Sends" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#to-ambisonics-wfs">
-    To Ambisonics + WFS
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#to-subwoofer">
-    To Subwoofer
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#ambisonics-spatial-control">
-    Ambisonics Spatial Control
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../wonder/">
@@ -249,80 +202,33 @@
     </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#hufo_serverscd">
-    HuFo_SERVER.scd
+<a class="md-nav__link" href="#spatial">
+    Spatial
   </a>
-<nav aria-label="HuFo_SERVER.scd" class="md-nav">
+<nav aria-label="Spatial" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#sc-io-assignment">
-    SC IO Assignment
+<a class="md-nav__link" href="#x-position">
+    X Position
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#y-position">
+    Y Position
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#z-position">
+    Z Position
   </a>
 </li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#hufo_wfsscd">
-    HuFo_WFS.scd
+<a class="md-nav__link" href="#bus-send">
+    Bus Send
   </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#starting">
-    Starting
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#setting-up">
-    Setting Up
-  </a>
-<nav aria-label="Setting Up" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#build-decoders">
-    Build Decoders
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#install-decoders">
-    Install Decoders
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#supercollider-osc-paths">
-    SuperCollider OSC Paths
-  </a>
-<nav aria-label="SuperCollider OSC Paths" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#sends">
-    Sends
-  </a>
-<nav aria-label="Sends" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#to-ambisonics-wfs">
-    To Ambisonics + WFS
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#to-subwoofer">
-    To Subwoofer
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#ambisonics-spatial-control">
-    Ambisonics Spatial Control
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
 </li>
 </ul>
 </nav>
@@ -331,114 +237,35 @@
 </div>
 <div class="md-content">
 <article class="md-content__inner md-typeset">
-<h1 id="supercollider">SuperCollider</h1>
-<p>Mixing, signal distribution and Ambisonics encoding in  the SeamLess System is based on SuperCollider. Two main scripts are used:</p>
-<h2 id="hufo_serverscd">HuFo_SERVER.scd</h2>
-<p><strong>HuFo_SERVER</strong> is the central distribution instance for the source signals, as well as for Ambisonics encoding.</p>
-<h3 id="sc-io-assignment">SC IO Assignment</h3>
-<p>The following assignment is only valid for the 3rd order configuration:</p>
-<table>
-<thead>
-<tr>
-<th>Inputs</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>00-63</td>
-<td>raw audio input</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th>Outputs</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>00-63</td>
-<td>WFS input channels</td>
-</tr>
-<tr>
-<td>64-79</td>
-<td>HOA encoded</td>
-</tr>
-<tr>
-<td>80-83</td>
-<td>FOA encoded reverb</td>
-</tr>
-<tr>
-<td>84</td>
-<td>sub send</td>
-</tr>
-</tbody>
-</table>
-<hr/>
-<h2 id="hufo_wfsscd">HuFo_WFS.scd</h2>
-<p><strong>HuFo_WFS</strong> is a  mixing and distribution instance for the source signals, limited to WFS for use on the additional WFS rendering servers.</p>
-<h2 id="starting">Starting</h2>
-<p>Both instances are take the same optional input arguments:</p>
-<pre><code class="language-console">$ sclang HuFo_SERVER.scd &lt;N_inputs&gt; &lt;server_port&gt;
-$ sclang HuFo_WFS.scd &lt;N_inputs&gt; &lt;server_port&gt;
+<h1 id="osc-paths">OSC Paths</h1>
+<p>In their current version, the plugins
+use the following OSC paths for sending
+and receiving messages.</p>
+<h2 id="spatial">Spatial</h2>
+<p>All spatial control messages get two arguments:</p>
+<ul>
+<li>the ID of the source to control (starting at index 1)</li>
+<li>the position (cuurently ranging from -10 to 10 meters).</li>
+</ul>
+<h3 id="x-position">X Position</h3>
+<pre><code class="language-console">/source/pos/x i f
 </code></pre>
-<p>Defaults:</p>
+<h3 id="y-position">Y Position</h3>
+<pre><code class="language-console">/source/pos/y i f
+</code></pre>
+<h3 id="z-position">Z Position</h3>
+<pre><code class="language-console">/source/pos/z i f
+</code></pre>
+<h2 id="bus-send">Bus Send</h2>
+<p>OSC messages for the send gains of the channels
+take three arguments:</p>
 <ul>
-<li>N_inputs: 64</li>
-<li>server_port: 58010</li>
+<li>the ID of the source to control (starting at index 1)</li>
+<li>the index of the bus to send to (starting at 0 OR 1)</li>
+<li>the gain (ranging from 0 to 1)</li>
 </ul>
-<h2 id="setting-up">Setting Up</h2>
-<h3 id="build-decoders">Build Decoders</h3>
-<p>Decoders in ADT have a problem for more than speakers 24? speakers. Use standalone decoder in that case.</p>
-<h3 id="install-decoders">Install Decoders</h3>
-<p>Copy the directory <code>decoders</code> to the SC user
-extension directory. It can be obtained in SC:</p>
-<p><code>Platform.userExtensionDir</code></p>
-<p>For larger loudspeaker setups (&lt;24), standalone Jack decoders are used.</p>
-<h2 id="supercollider-osc-paths">SuperCollider OSC Paths</h2>
-<p>The sueprcollider mixer listens to several OSC messages for signal routing and conrolling positions</p>
-<h3 id="sends">Sends</h3>
-<h4 id="to-ambisonics-wfs">To Ambisonics + WFS</h4>
-<p><code>/source/send/spatial i i f</code></p>
-<ul>
-<li>first argument = channel ID</li>
-<li>second argument = system ID</li>
-<li>0 = Ambisonics (inside SC)</li>
-<li>1 = WFS (external, WONDER)</li>
-</ul>
-<h4 id="to-subwoofer">To Subwoofer</h4>
-<p><code>/source/send/direct i i f</code></p>
-<ul>
-<li>first argument = channel ID</li>
-<li>second argument = output ID</li>
-<li>0 = Subwoofer</li>
-</ul>
-<h4 id="ambisonics-spatial-control">Ambisonics Spatial Control</h4>
-<p><code>/source/pos/azim i f</code></p>
-<ul>
-<li>first argument = channel ID</li>
-<li>second argument = angle (rad)</li>
-</ul>
-<p><code>/source/pos/elev i f</code></p>
-<ul>
-<li>first argument = channel ID</li>
-<li>second argument = angle (rad)</li>
-</ul>
-<p><code>/source/pos/dist i f</code></p>
-<ul>
-<li>first argument = channel ID</li>
-<li>second argument = distance (meters)</li>
-</ul>
-<p><code>/source/pos/aed i f f f</code></p>
-<ul>
-<li>first argument  = channel ID</li>
-<li>second argument = azimuth (degree)</li>
-<li>third argument  = elevation (degree)</li>
-<li>fourth argument = distance (meters)</li>
-</ul>
+<pre><code class="language-console">/send/gain i i f
+</code></pre>
 </article>
 </div>
 </div>
@@ -446,7 +273,7 @@ extension directory. It can be obtained in SC:</p>
 <footer class="md-footer">
 <div class="md-footer-nav">
 <nav aria-label="Footer" class="md-footer-nav__inner md-grid">
-<a class="md-footer-nav__link md-footer-nav__link--prev" href="../signalflow/" rel="prev">
+<a class="md-footer-nav__link md-footer-nav__link--prev" href="../plugins/" rel="prev">
 <div class="md-footer-nav__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
 </div>
@@ -455,17 +282,17 @@ extension directory. It can be obtained in SC:</p>
 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Signal Flow
+                Plugins
               </div>
 </div>
 </a>
-<a class="md-footer-nav__link md-footer-nav__link--next" href="../wonder/" rel="next">
+<a class="md-footer-nav__link md-footer-nav__link--next" href="../signalflow/" rel="next">
 <div class="md-footer-nav__title">
 <div class="md-ellipsis">
 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                WFS/WONDER
+                Signal Flow
               </div>
 </div>
 <div class="md-footer-nav__button md-icon">
