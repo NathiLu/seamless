@@ -14,7 +14,7 @@
     
     
       
-        <title>SeamLess</title>
+        <title>System Setup - SeamLess</title>
       
     
     
@@ -61,7 +61,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#seamless" class="md-skip">
+        <a href="#setting-up-the-system" class="md-skip">
           Skip to content
         </a>
       
@@ -90,7 +90,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              SeamLess
+              System Setup
             
           </span>
         </div>
@@ -251,12 +251,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
       
       <label class="md-nav__link" for="__nav_4">
         Technical Documentation
@@ -332,11 +334,114 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="system_setup.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          System Setup
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="system_setup.html" class="md-nav__link md-nav__link--active">
         System Setup
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#python-dependencies" class="md-nav__link">
+    Python Dependencies
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supercollider" class="md-nav__link">
+    SuperCollider
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-faust-reverb" class="md-nav__link">
+    Build Faust Reverb
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#developer-mode" class="md-nav__link">
+    Developer Mode
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#turn-off-dbus-activated-jack" class="md-nav__link">
+    Turn off dbus activated jack
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seamless-installation" class="md-nav__link">
+    Seamless installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wonder-installation" class="md-nav__link">
+    WONDER installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disable-automatic-updates" class="md-nav__link">
+    Disable Automatic Updates
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#turn-off-graphical-user-interface" class="md-nav__link">
+    Turn off graphical user interface
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-user-to-audio-group" class="md-nav__link">
+    Add user to audio group
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -373,8 +478,71 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#all-software-components-are-organized-in-a-dedicated-repository-seamless" class="md-nav__link">
-    All software components are organized in a dedicated repository: SeamLess
+  <a href="#python-dependencies" class="md-nav__link">
+    Python Dependencies
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supercollider" class="md-nav__link">
+    SuperCollider
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-faust-reverb" class="md-nav__link">
+    Build Faust Reverb
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#developer-mode" class="md-nav__link">
+    Developer Mode
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#turn-off-dbus-activated-jack" class="md-nav__link">
+    Turn off dbus activated jack
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seamless-installation" class="md-nav__link">
+    Seamless installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wonder-installation" class="md-nav__link">
+    WONDER installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disable-automatic-updates" class="md-nav__link">
+    Disable Automatic Updates
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#turn-off-graphical-user-interface" class="md-nav__link">
+    Turn off graphical user interface
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-user-to-audio-group" class="md-nav__link">
+    Add user to audio group
   </a>
   
 </li>
@@ -392,16 +560,85 @@
               
                 
                 
-                <h1 id="seamless">SeamLess</h1>
-<p>This is the documentation for the combined Ambisonics and WFS system at <a href="https://www.humboldtforum.org/en/">Humboldt Forum</a>, Berlin.
-It provides basic information and guidelines for artists, as well as extended instructions for engineers and system administrators.</p>
-<p><strong>If you want to know more about the concept, continue here:</strong> <a href="about/">Concept</a></p>
-<p><strong>If you are interested in using the system from a Reaper session, continue here:</strong> <a href="reaper/">Reaper Userguide</a></p>
-<h2 id="all-software-components-are-organized-in-a-dedicated-repository-seamless"><strong>All software components are organized in a dedicated repository:</strong> <a href="https://github.com/anwaldt/seamless">SeamLess</a></h2>
-<p><strong>2021 - TU Studio Team:</strong>  <br />
-<em>Henrik von Coler</em><br />
-<em>Paul Schuladen</em><br />
-<em>Nils Tonnätt</em>  </p>
+                <h1 id="setting-up-the-system">Setting up the System</h1>
+<h2 id="python-dependencies">Python Dependencies</h2>
+<pre><code>pip3 install oscpy
+</code></pre>
+<h2 id="supercollider">SuperCollider</h2>
+<p>1: Build and install SC</p>
+<p>2: Build a headless version of SC:</p>
+<p>Follow https://github.com/supercollider/supercollider/blob/develop/README_LINUX.md but call cmake:</p>
+<pre><code>cmake -DCMAKE_BUILD_TYPE=Release -DNATIVE=ON -DSC_EL=no -DSC_ABLETON_LINK=off -NO_X11=ON -DSC_QT=OFF ..
+</code></pre>
+<p>Install SC3-Plugins:</p>
+<pre><code>https://github.com/supercollider/sc3-plugins
+</code></pre>
+<p>Install SC-HOA classes:</p>
+<pre><code>Quarks.install("https://github.com/florian-grond/SC-HOA")
+</code></pre>
+<h2 id="build-faust-reverb">Build Faust Reverb</h2>
+<p>Faust code for the Ambisonics reverb is located in <code>Faust/reverb</code>. The install script builds and installs the SuperCollider class and objects to the user extensions directory. Make sure install ruby before using the Faust to SC compiler.</p>
+<h2 id="developer-mode">Developer Mode</h2>
+<p>The scripts <code>supercollider_gui.sh</code> and <code>supercollider_nogui.sh</code>
+allow to switch between the standard SC install
+and the headless version by setting symlinks in <code>/usr/local/bin</code></p>
+<p>Once the standard version is lionked, <code>scide</code> can be started for
+development and debugging.</p>
+<h2 id="turn-off-dbus-activated-jack">Turn off dbus activated jack</h2>
+<p>For using the seamless_jack system service it might be necessary to turn off
+the dbus activated jack daemon:</p>
+<pre><code class="bash">jack_control stop
+</code></pre>
+
+<h2 id="seamless-installation">Seamless installation</h2>
+<p>For the installation of SeamLess the Meson build system is used.</p>
+<p>Create build directory:</p>
+<pre><code class="bash">meson builddir
+</code></pre>
+
+<p>Set SeamLess location (e.g. EN325, HUFO):</p>
+<pre><code class="bash">cd builddir
+meson configure -Dlocation=HUFO
+</code></pre>
+
+<p>Installation:</p>
+<pre><code class="bash">sudo meson install
+</code></pre>
+
+<p>Create symlink to specific snapshot:</p>
+<pre><code class="bash">cd /etc/seamless
+ln -s snapshots/wfs1.snap aj_snapshot_config.xml
+</code></pre>
+
+<h2 id="wonder-installation">WONDER installation</h2>
+<p>WONDER also uses Meson.</p>
+<pre><code class="bash">meson builddir
+cd builddir
+meson configure -Dlocation=HUFO
+meson compile
+sudo meson install
+</code></pre>
+
+<h2 id="disable-automatic-updates">Disable Automatic Updates</h2>
+<p>Automatic updates are not desired, since they can change the
+system behavior. In addition can disable the DANTE drivers.</p>
+<p>Edit:</p>
+<pre><code>/etc/apt/apt.conf.d/20auto-upgrades
+</code></pre>
+<p>It needs to be:</p>
+<pre><code>APT::Periodic::Update-Package-Lists "0";
+APT::Periodic::Download-Upgradeable-Packages "0";
+APT::Periodic::AutocleanInterval "0";
+APT::Periodic::Unattended-Upgrade "1";
+</code></pre>
+<h2 id="turn-off-graphical-user-interface">Turn off graphical user interface</h2>
+<pre><code class="bash">sudo systemctl set-default multi-user
+</code></pre>
+
+<h2 id="add-user-to-audio-group">Add user to audio group</h2>
+<p>Add the user to the audio group:</p>
+<pre><code>audio:x:29:pulse,user
+</code></pre>
                 
               
               
@@ -417,6 +654,26 @@ It provides basic information and guidelines for artists, as well as extended in
       
         
 <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="oscrouter.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: OSC Router" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              OSC Router
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

@@ -14,7 +14,7 @@
     
     
       
-        <title>SeamLess</title>
+        <title>Reaper User Guide - SeamLess</title>
       
     
     
@@ -61,7 +61,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#seamless" class="md-skip">
+        <a href="#working-with-reaper" class="md-skip">
           Skip to content
         </a>
       
@@ -90,7 +90,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              SeamLess
+              Reaper User Guide
             
           </span>
         </div>
@@ -182,11 +182,72 @@
 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="reaper.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Reaper User Guide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="reaper.html" class="md-nav__link md-nav__link--active">
         Reaper User Guide
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#audio-sources-in-general" class="md-nav__link">
+    Audio-Sources in general
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#audio-sources-in-reaper" class="md-nav__link">
+    Audio Sources  in REAPER
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#content-production-process" class="md-nav__link">
+    Content Production Process
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#content-playback" class="md-nav__link">
+    Content Playback
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -373,8 +434,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#all-software-components-are-organized-in-a-dedicated-repository-seamless" class="md-nav__link">
-    All software components are organized in a dedicated repository: SeamLess
+  <a href="#audio-sources-in-general" class="md-nav__link">
+    Audio-Sources in general
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#audio-sources-in-reaper" class="md-nav__link">
+    Audio Sources  in REAPER
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#content-production-process" class="md-nav__link">
+    Content Production Process
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#content-playback" class="md-nav__link">
+    Content Playback
   </a>
   
 </li>
@@ -392,16 +474,44 @@
               
                 
                 
-                <h1 id="seamless">SeamLess</h1>
-<p>This is the documentation for the combined Ambisonics and WFS system at <a href="https://www.humboldtforum.org/en/">Humboldt Forum</a>, Berlin.
-It provides basic information and guidelines for artists, as well as extended instructions for engineers and system administrators.</p>
-<p><strong>If you want to know more about the concept, continue here:</strong> <a href="about/">Concept</a></p>
-<p><strong>If you are interested in using the system from a Reaper session, continue here:</strong> <a href="reaper/">Reaper Userguide</a></p>
-<h2 id="all-software-components-are-organized-in-a-dedicated-repository-seamless"><strong>All software components are organized in a dedicated repository:</strong> <a href="https://github.com/anwaldt/seamless">SeamLess</a></h2>
-<p><strong>2021 - TU Studio Team:</strong>  <br />
-<em>Henrik von Coler</em><br />
-<em>Paul Schuladen</em><br />
-<em>Nils Tonnätt</em>  </p>
+                <h1 id="working-with-reaper">Working with Reaper</h1>
+<p>The most accessible way of using the SeamLess system is a single DAW session from a laptop, just as working with any other multi-track audio project.
+Reaper is used as the standard software in most projects and recommended.
+Other solutions are possible but not fully tested.
+Each audio track in a Reaper project is directly routed to the system with DANTE
+and connected to a virtual sound source.
+Source position and additional properties can be
+controlled and automated as any other parameter.
+This workflow ensures that content can be prepared in advance and ported
+to the system afterwards.</p>
+<hr />
+<h2 id="audio-sources-in-general">Audio-Sources in general</h2>
+<p>An audio-source in a spatial audio-system is defined by the audio content and the source attributes, like the position of the source. Depending on the used rendering-module in the HuFo-System (WFS, Ambisonics, Reverb) additional attributes can be defined, e.g. <em>plane wave</em> and <em>Doppler effect</em> for the WFS module.</p>
+<p>The rendering modules are running parallel for all sources. Which rendering module is used can be determined with the additional "send to" parameters, which control the amount of the audio-signal being sent to a specific rendering module. In that way a fades from on to another system as well as mixtures can be realized.</p>
+<p>By definition all Audio-Sources are Mono-Audio sources and best results in spatial precision are achieved by sending all audio-element to a single audio source. Of course stereo or other multichannel material can be used too, by using audio sources as virtual speakers which are rendered by the system.</p>
+<hr />
+<h2 id="audio-sources-in-reaper">Audio Sources  in REAPER</h2>
+<p>For defining an audio-source in REAPER, a Plugin is used for sending the source attributes via OSC synchronized to the audio playback (here OSCar by IRCAM is used).
+Every audio source is identified by an ID (1-64) which is set in the plugin and corresponds to the channel the audio is sent out. This also means every instance of the plugins represents one audio source.
+The output of the audio tracks should be set be sent to a mono channel, either as direct hardware output or if you are using bus-systems to a mono channel on the bus-track.</p>
+<hr />
+<p><img alt="reapersource" src="graphics/reaper_source.svg" style="width:500px" title="One Source in Reaper" /></p>
+<hr />
+<p><img alt="oscar-inreaper" src="graphics/Reaper-OscarPlugin.svg" style="width:500px" title="OSCar plugin with source ID" /></p>
+<hr />
+<p><img alt="reapearmono" src="graphics/reaper_HWmono1.svg" style="width:500px" title="Mono Output Routing" /></p>
+<hr />
+<h2 id="content-production-process">Content Production Process</h2>
+<p><img alt="" src="graphics/ReaperDiagramm.png" style="width:500px" /></p>
+<p>In the production process the automation data can either be written with the pencil tool inside of REAPER. Also a dedicated interface-client or hardware controllers can be used, which connect also to the central OSC router. The OSC messages are then distributed to the REAPER-plugin where it can be written using the Reaper's automation modes.</p>
+<p><strong>Since it is not defined which state the sources have at the beginning of the playback all source-attributes must be set at the beginning of the project.</strong></p>
+<p>For more information about the OSC-Data have a look in the chapter OSC-Router.</p>
+<p><img alt="" src="graphics/interface-example.png" style="width:700px" /></p>
+<hr />
+<h2 id="content-playback">Content Playback</h2>
+<p>The result of a production is a multichannel audio file in which the plugin automation data will be embedded with REAPER's Take FX function. This file including the automations will be saved in Reaper Project Bay from it then can be pasted and arranged in a playback project.</p>
+<p>For the project-export a Reaperscript is provided which automates the rendering and data-embedding process.</p>
+<p><img alt="" src="graphics/Playback-project.png" /></p>
                 
               
               
@@ -417,6 +527,41 @@ It provides basic information and guidelines for artists, as well as extended in
       
         
 <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="about.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: About the System" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              About the System
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="plugins.html" class="md-footer__link md-footer__link--next" aria-label="Next: Plugins" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Plugins
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
