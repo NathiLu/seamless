@@ -8,10 +8,6 @@ schedctrl = SchedControl()
 def create_app(test_config=None):
     # create and configure the app
     app = Flask(__name__, instance_relative_config=True)
-    app.config.from_mapping(
-        SECRET_KEY='dev',
-        DATABASE=os.path.join(app.instance_path, 'webcontrol.sqlite'),
-    )
 
     if test_config is None:
         # load the instance config, if it exists, when not testing
@@ -30,9 +26,6 @@ def create_app(test_config=None):
     @app.route('/hello')
     def hello():
         return 'Hello, World!'
-
-    from . import db
-    db.init_app(app)
 
     from . import showcontrol
     app.register_blueprint(showcontrol.bp)
