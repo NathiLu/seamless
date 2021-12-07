@@ -382,6 +382,40 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#quick-info" class="md-nav__link">
+    Quick-Info
+  </a>
+  
+    <nav class="md-nav" aria-label="Quick-Info">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#messages-with-source-index-in-osc-address" class="md-nav__link">
+    Messages with source-index in osc-address:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#messages-with-source-index-as-argument" class="md-nav__link">
+    Messages with source index as argument:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#possible-coordinate-prefixes" class="md-nav__link">
+    Possible coordinate prefixes:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#osc-router-config" class="md-nav__link">
     OSC-Router config
   </a>
@@ -391,6 +425,46 @@
         <li class="md-nav__item">
   <a href="#accepted-osc-messages" class="md-nav__link">
     accepted OSC messages
+  </a>
+  
+    <nav class="md-nav" aria-label="accepted OSC messages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#secondary-port" class="md-nav__link">
+    secondary Port
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#subcription-protocol" class="md-nav__link">
+    Subcription-Protocol
+  </a>
+  
+    <nav class="md-nav" aria-label="Subcription-Protocol">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#subscribe" class="md-nav__link">
+    Subscribe
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debug-functions" class="md-nav__link">
+    Debug functions
   </a>
   
 </li>
@@ -446,6 +520,40 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#quick-info" class="md-nav__link">
+    Quick-Info
+  </a>
+  
+    <nav class="md-nav" aria-label="Quick-Info">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#messages-with-source-index-in-osc-address" class="md-nav__link">
+    Messages with source-index in osc-address:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#messages-with-source-index-as-argument" class="md-nav__link">
+    Messages with source index as argument:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#possible-coordinate-prefixes" class="md-nav__link">
+    Possible coordinate prefixes:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#osc-router-config" class="md-nav__link">
     OSC-Router config
   </a>
@@ -455,6 +563,46 @@
         <li class="md-nav__item">
   <a href="#accepted-osc-messages" class="md-nav__link">
     accepted OSC messages
+  </a>
+  
+    <nav class="md-nav" aria-label="accepted OSC messages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#secondary-port" class="md-nav__link">
+    secondary Port
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#subcription-protocol" class="md-nav__link">
+    Subcription-Protocol
+  </a>
+  
+    <nav class="md-nav" aria-label="Subcription-Protocol">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#subscribe" class="md-nav__link">
+    Subscribe
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debug-functions" class="md-nav__link">
+    Debug functions
   </a>
   
 </li>
@@ -478,14 +626,51 @@
                 
                 <h1 id="osc-router-and-processor">OSC-Router and Processor</h1>
 <p>The OSC-Router written in python serves as central interface for OSC-messages in a multiclient spatial rendering environment.
-It automatically translates incoming OSC-messages to match the expected formats of the rendering-engines and distributes it to all connected clients including UI-Clients and Data-clients for automation data. (Here Ircams OSCar).</p>
+It automatically translates incoming OSC-messages to match the expected formats of the rendering-engines and distributes it to all connected clients including UI-Clients and Data-clients for automation data.</p>
+<h2 id="quick-info">Quick-Info</h2>
+<p>Port: 4455</p>
+<p>There are 32 sources which can be set via the following messages:</p>
+<h3 id="messages-with-source-index-in-osc-address">Messages with source-index in osc-address:</h3>
+<ul>
+<li>Position</li>
+<li><code>/source/1/xyz fff</code> </li>
+<li><code>/source/1/aed fff</code></li>
+<li>Gain<ul>
+<li><code>/source/1/ambi f</code></li>
+<li><code>/source/1/wfs f</code> </li>
+<li><code>/source/1/reverb f</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="messages-with-source-index-as-argument">Messages with source index as argument:</h3>
+<ul>
+<li>Position<ul>
+<li><code>/source/xyz ifff</code> </li>
+<li><code>/source/aed ifff</code></li>
+</ul>
+</li>
+<li>Gain<ul>
+<li><code>/source/ambi if</code> </li>
+<li><code>/source/wfs if</code> </li>
+<li><code>/source/reverb if</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="possible-coordinate-prefixes">Possible coordinate prefixes:</h3>
+<ul>
+<li>Polar (angles in degree -180:180)
+aed, ae, ad, ed, azim, elev, dist</li>
+<li>Cartesian
+xyz, xy, xz, yz, x, y, z</li>
+</ul>
 <h2 id="osc-router-config">OSC-Router config</h2>
 <p>The OSC-Router is started by executing the <code>MAIN_oscrouter.py</code>. Per default it loads the configurationfile <code>oscRouterConfig.txt</code> in the same folder. With the argument <code>--config</code> another file can be loaded.</p>
-<p>The configfile consists of a number of blocks which are divided with <code>***</code>. For more information have a look at <code>configSampe.txt</code></p>
-<p>It provides an additional debug option: using the option <code>--oscdebug</code> followed by a string with ip and port (e.g. <code>--oscdebug "192.168.3.2 55112"</code>) an additional OSC-listener can be defined, which receives a copy of every OSC-message sent out by the OSC-router.</p>
+<p>The configfile consists of a number of blocks which are divided with <code>***</code>. For more information have a look at <code>configSample.txt</code></p>
+<p>It provides an additional debug option: using the option <code>--oscdebug</code> followed by a string with ip and port (e.g. <code>--oscdebug "192.168.3.2:55112"</code>) an additional OSC-listener can be defined, which receives a copy of every OSC-message sent out by the OSC-router.</p>
 <h2 id="accepted-osc-messages">accepted OSC messages</h2>
+<p>port:4455</p>
 <p>The Osc-Router accepts various message formats and take care of converting them to the right format. Every OSC-Message consists of a OSC-Address Prefix followed by a number of values. Here we only work with integer- (i) and float-values (f)</p>
-<p>Source IDs begins with Index 1 and can go up to 64. The following examples demonstrate which OSC-Messages are accepted for position data. </p>
+<p>Source IDs begins with Index 1 and can go up to 32. The following examples demonstrate which OSC-Messages are accepted for position data. </p>
 <ul>
 <li>
 <p>Source ID can be in the OSC-Prefix
@@ -509,13 +694,44 @@ It automatically translates incoming OSC-messages to match the expected formats 
 <p>Polar and Cartesian formats will automatically converted according to the target renderer.</p>
 <p>A <strong>gain-send</strong> value has to be given which is the amount of audio sent to a specific rendering module (e.g. Ambisonics, WFS).</p>
 <p><code>/source/send/spatial i i f</code> with i i f = <em>sourceID renderingID gain(linear)</em></p>
-<p>A <strong>direct-send</strong> to a speaker can be given:</p>
-<p>'/source/send/direct i i f' with i i f = <em>sourceID outputID gain(linear)</em> (0 = Subwoofer)</p>
-<p>Settubg render-specific attributes:</p>
-<ul>
-<li><code>/source/doppler i i</code> with i i = <em>sourceID 0/1</em></li>
-<li><code>/source/planewvae i i</code> with i i = <em>sourceID 0/1</em></li>
-</ul>
+<p>If confgured in the config file the gains can also be set with the name of the renderer:
+* <code>/source/1/wfs f</code>
+* <code>/source/1/ambi f</code>
+* <code>/source/1/rev f</code></p>
+<h3 id="secondary-port">secondary Port</h3>
+<p>Port: 4007
+The secondary port has basically the same function as the main port 4455 but messages coming in on the main port are causing messages on the secondary port to be ignored for 2sec (configurable in the config-file). This happens separately for each source.</p>
+<h2 id="subcription-protocol">Subcription-Protocol</h2>
+<p>Subcription-Port: 4999
+Source-Data-Port: 4455</p>
+<p>The connection is initialised by a subscricption-request from the client which is followed by a regular ping-message from the OSC-router that must by answered by a pong-message in order to keep the subscription alive. Source-Position and gain messages should be sent to port 4455 and the subcription-messages to port 4999.</p>
+<h3 id="subscribe">Subscribe</h3>
+<p>A client can subscribe to all position and gain messages e.g. a viewer-client during production process. Subcriptions and pong messages should be send to port 4999.
+The connection is initialised via:
+<code>/oscrouer/subscribe s i s (i i)</code> with s = uniqueClientName, i=listeningPort, s=coordinateFormat, i=sourceIndexInOsc(0/1), i=minUpdateIntervall
+The last three arguments are optional and are set to '1 10' by default. 
+e.g. <code>/oscrouter/subscribe maxViewer 55123 xyz 1 10</code>
+will send source-position messages to the subscribing client as follows:
+* For Position
+    <code>/source/1/xyz fff</code> with a max. rate of 100Hz (every 10 ms).
+* For gains e.g.
+ <code>/source/1/ambi f</code></p>
+<p>The ip-Address of the client is retrieved automatically from the udp-packet by the OSC-Router.</p>
+<p>### ping-pong</p>
+<p>The osc-router send the message
+<code>/oscrouter/ping 4999</code>
+which should be answered (to port 4999) with
+<code>/oscrouter/pong uniqueClientName</code>
+The uniqueClientName has to be the same as in the subcription message. 
+If the client does not answer to the ping message he will be erased after a certain time. </p>
+<h2 id="debug-functions">Debug functions</h2>
+<p>Port: 4999</p>
+<p>A copy of all outgoing osc-messages from the osc-router can requested by sending:
+<code>/oscrouter/debug/osccopy ipAddress:port</code> with ipAddress and listening port of the receiving machine e.g. <code>/oscrouter/debug/osccopy 192.168.3.2:55112</code>
+The debug-osc messages contain the name of the target as well as ip-address and port.
+To deactivate this send a message without target address: <code>/oscrouter/debug/osccopy</code></p>
+<p>With the message <code>/oscrouter/debug/verbose i</code> a verbosity level can be set which activates console printing of incoming and outcoming messages as well as further informations. 
+Set verbosity to 0 when to stop console output which can significantly slow down the system. </p>
                 
               
               
