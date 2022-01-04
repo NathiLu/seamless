@@ -27,7 +27,7 @@ By definition all Audio-Sources are Mono-Audio sources and best results in spati
 
 For defining an audio-source in REAPER, a Plugin is used for sending the source attributes via OSC synchronized to the audio playback (here OSCar by IRCAM is used).
 Every audio source is identified by an ID (1-64) which is set in the plugin and corresponds to the channel the audio is sent out. This also means every instance of the plugins represents one audio source.
-The output of the audio tracks should be set be sent to a mono channel, either as direct hardware output or if you are using bus-systems to a mono channel on the bus-track.
+The output of the audio tracks should be sent to a mono channel, either as direct hardware output or if you are using bus-systems to a mono channel on the bus-track.
 
 ---
 
